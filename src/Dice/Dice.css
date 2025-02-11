@@ -1,0 +1,75 @@
+.dice-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    border-radius: 20px;
+    background-color: green;
+    background-image: url("../assets/roll.jpeg");
+    filter: invert(25%) sepia(75%) saturate(5) hue-rotate(50deg) brightness(90%) contrast(100%);
+    background-size: cover; /* Убедитесь, что изображения занимают всю кнопку */
+    transition: background-image 0.5s ease, transform 0.5s ease; /* Для плавного перехода при наведении */
+}
+
+.dice-button:hover {
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+
+.diсe-button-0 {
+    background-image: url("../assets/0.png");
+}
+
+.diсe-button-1 {
+    background-image: url("../assets/1.png");
+}
+
+.diсe-button-2 {
+    background-image: url("../assets/2.png");
+}
+
+.diсe-button-3 {
+    background-image: url("../assets/3.png");
+}
+
+.diсe-button-4 {
+    background-image: url("../assets/4.png");
+}
+
+.diсe-button-5 {
+    background-image: url("../assets/5.png");
+}
+
+.dice-info {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Анимация броска */
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(720deg);
+    }
+    100% {
+        transform: rotate(1440deg);
+    }
+}
+
+.rolling {
+    animation: roll 1s ease-out; /* Применение анимации вращения */
+}
+
+.dice-button.rolling {
+    background-image: url("../assets/roll.jpeg");
+}
+
+.dice-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.dice-info p {
+    margin: 0;
+}
