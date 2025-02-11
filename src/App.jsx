@@ -5,10 +5,11 @@ import { ResultsList } from './ResultsList/ResultsList'
 
 function App() {
 
-  const basename = import.meta.env.PROD ? '/fallout-tbg-dices' : '';
+  // const basename = import.meta.env.PROD ? '/fallout-tbg-dices' : '';
 
   return (
-    <BrowserRouter basename={basename}>
+    // <BrowserRouter basename={basename}>
+    <BrowserRouter basename='/fallout-tbg-dices'>
       <Routes>
         <Route path='/' element={<Table />} />
         <Route path='/results' element={<ResultsList />} />
